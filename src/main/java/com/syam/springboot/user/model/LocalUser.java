@@ -1,9 +1,16 @@
 package com.syam.springboot.user.model;
 
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.Positive;
+import jakarta.validation.constraints.Size;
+
 public class LocalUser {
 
+    @Positive
     int id;
+    @Size(min = 4 ,max = 10)
     String Name;
+    @Email
     String email;
 
     public LocalUser(int id, String name, String email) {
