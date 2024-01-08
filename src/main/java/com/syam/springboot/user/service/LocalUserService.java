@@ -43,7 +43,7 @@ public class LocalUserService {
         }).findFirst();
     }
 
-    public void removeeUser(int id) {
-        localUsers.removeIf(s -> s.getId() == id);
+    public boolean removeeUser(int id) {
+        return localUsers.removeIf(s -> s.getId() == id);
     }
 }
