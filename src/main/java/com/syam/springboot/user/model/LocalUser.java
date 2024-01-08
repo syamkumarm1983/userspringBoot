@@ -1,12 +1,12 @@
 package com.syam.springboot.user.model;
 
-public class User {
+public class LocalUser {
 
     int id;
     String Name;
     String email;
 
-    public User(int id, String name, String email) {
+    public LocalUser(int id, String name, String email) {
         this.id = id;
         Name = name;
         this.email = email;

@@ -1,0 +1,13 @@
+spring.application.name: spring-data-service
+
+server.port: 8080
+
+management.server.port: 8082
+
+
+
+datastax.astra:
+  secure-connect-bundle: /Users/syamkumarmamidipaka/Downloads/secure-connect-syam.zip
+  username: dkgFHflnXdirMzNWItyifeMR
+  password: n+f5U9,-+gBKInjSWy.g1nZZf-gmytuigMdwt0Zs2u15DdgTRQfMpBaha0oQhCK0nQlbE19Ay_mCQZURN2wuBMGz,9EPcFRfDEzcaSsxLZR5bHwalaT16hwvPURFiHXC
+  keyspacename: user
