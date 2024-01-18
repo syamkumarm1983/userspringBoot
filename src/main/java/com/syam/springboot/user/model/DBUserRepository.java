@@ -9,13 +9,13 @@ import java.util.List;
 
 @Repository
 @RestResource(exported = false)
-public interface DBUserRepository extends CassandraRepository<DBUser, Integer> {
+public interface DBUserRepository extends CassandraRepository<DBUser, String> {
 
     // DELETE
 
-    void deleteById(int id);
-
-    List<DBUser> findByid(int id);
-
-    List<DBUser> findAllByid(int id);
+    void deleteByemail(String id);
+//
+    List<DBUser> findByemail(String email);
+//
+//    List<DBUser> findAllByid(int id);
 }

@@ -7,7 +7,7 @@ management.server.port: 8082
 
 
 datastax.astra:
-  secure-connect-bundle: /Users/syamkumarmamidipaka/Downloads/secure-connect-syam.zip
-  username: dkgFHflnXdirMzNWItyifeMR
-  password: n+f5U9,-+gBKInjSWy.g1nZZf-gmytuigMdwt0Zs2u15DdgTRQfMpBaha0oQhCK0nQlbE19Ay_mCQZURN2wuBMGz,9EPcFRfDEzcaSsxLZR5bHwalaT16hwvPURFiHXC
-  keyspacename: user
+  secure-connect-bundle: /Users/syamkumarmamidipaka/Downloads/secure-connect-user.zip
+  username: WduaZLNHhiTPdjZolYJodHat
+  password: v3wLjaFY+7WTNBI,Y_.HZLD+1+XiDyXGpbHBSd-Jn2ZKeJzt59h7OxvcF,nfn2QoFQfl5FkWZpnyORez+NOwNhc-c,TJg6pZmXFlPHZD0fmCk4gTFUevyyl5U5EQIfZB
+  keyspacename: myuser
