@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.UUID;
 
 @RestController
 public class DBUserController {
@@ -14,9 +15,9 @@ public class DBUserController {
     private DBUserRepository dbuesrRepository;
 
 
-    @GetMapping("/dbuser/{id}")
-    public List<DBUser> getDbUser(@PathVariable("id") int id) {
-        return dbuesrRepository.findAllByid(id);
+    @GetMapping("/dbuser/{email}")
+    public List<DBUser> getDbUser(@PathVariable("email") String email) {
+        return dbuesrRepository.findByemail(email);
     }
 
     @GetMapping("/getAlldbUser")
@@ -26,11 +27,17 @@ public class DBUserController {
 
     @PutMapping("/addDbuser")
     public DBUser addDbUser(@RequestBody DBUser user) {
+        user.setID(UUID.randomUUID());
         return dbuesrRepository.save(user);
     }
 
-    @DeleteMapping("/removeDbuser/{id}")
-    public void deleDbuser(@PathVariable("id") int id) {
-        dbuesrRepository.deleteById(id);
+    @PostMapping("/updateDbuser")
+    public DBUser updateDbUser(@RequestBody DBUser user) {
+        return dbuesrRepository.save(user);
+    }
+
+    @DeleteMapping("/removeDbuser/{email}")
+    public void deleDbuser(@PathVariable("email") String email) {
+        dbuesrRepository.deleteByemail(email);
     }
 }
