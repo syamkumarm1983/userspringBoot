@@ -41,13 +41,24 @@ This Application is modified as below
     2. Kafk Consumers will do insert update and delete users from DB
 
 1. API
+
    -> Get All records
+
    -> When we call Add user it will call kafka producer and write message to insert topic
+
    -> When we call Update user it will call kafka producer and write message to update topic
+
    -> When we call Delete user it will call kafka producer and write message to Delete topic
+
 2. Kafka
+
    -> Kafka configurations are managed using application.yml
+
    -> Kafka topic are created using the kafkaConfig class
+   
    -> Kafka producer will publish a  message for the api put,post or delete call into different topics
+
    -> Kafka consumer also configured with spring boot
+
    -> Kafka each consumer is currently read string message and do the DB insert update and delete
+
