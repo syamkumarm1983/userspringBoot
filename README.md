@@ -62,3 +62,12 @@ This Application is modified as below
 
    -> Kafka each consumer is currently read string message and do the DB insert update and delete
 
+Logging :
+ 
+      1. We can log all the request that are comins in the API are achived by creating the bean CommonsRequestLoggingFilter in this bean we can 
+        enable required like bewlo
+                        * loggingFilter.setIncludeClientInfo(true);
+                        * loggingFilter.setIncludeQueryString(true);
+                        * loggingFilter.setIncludePayload(true);
+                        * loggingFilter.setIncludeHeaders(true);
+     2. Spring frame work will create @Slf4j we need not to create log object
