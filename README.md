@@ -61,3 +61,4 @@ This Application is modified as below
    -> Kafka consumer also configured with spring boot
 
    -> Kafka each consumer is currently read string message and do the DB insert update and delete
+
