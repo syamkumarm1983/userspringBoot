@@ -1,6 +1,7 @@
 package com.syam.springboot.user.controler;
 
 import com.syam.springboot.user.model.LocalUser;
+import com.syam.springboot.user.service.KafkaProducer;
 import com.syam.springboot.user.service.LocalUserService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +18,9 @@ public class LocalUserController {
     @Autowired
     LocalUserService localUserService;
 
+    @Autowired
+    KafkaProducer myproducer;
+
     @GetMapping("/user/{id}")
     public LocalUser getUser(@Valid @PathVariable int id){
         LocalUser u = localUserService.getUser(id);
@@ -31,7 +35,10 @@ public class LocalUserController {
 
     @PutMapping("/addUser")
     public void addUser(@Valid @RequestBody LocalUser localUser) {
+
         localUserService.addUser(localUser);
+
+        //myproducer.sendMessage("userinsert-events",localUser.toString());
     }
 
     @GetMapping("/AllUsers")

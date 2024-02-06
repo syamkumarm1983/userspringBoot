@@ -17,3 +17,15 @@ logging:
     root: INFO
     org.springframework: INFO
     org.springframework.web.filter.CommonsRequestLoggingFilter: DEBUG
+spring:
+  kafka:
+    producer:
+        bootstrap-servers: localhost:9092
+        key-serializer: org.apache.kafka.common.serialization.StringSerializer
+        value-serializer: org.apache.kafka.common.serialization.StringSerializer
+    consumer:
+        bootstrap-servers: localhost:9092
+        group-id: myuser
+        key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+        value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+
